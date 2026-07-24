@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="A privacy-focused Chrome extension that helps users understand USCIS case API responses for I-485, I-765, and I-131 cases.">
   <meta name="theme-color" content="#0f4c81">
-  <title>Case Clarity — Understand Your USCIS Case Updates</title>
+  <title>USCIS Case Monitor — Understand Your USCIS Case Updates</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Case Clarity home">
+      <a class="brand" href="index.html" aria-label="USCIS Case Monitor home">
         <span class="brand-mark" aria-hidden="true">C</span>
-        <span>Case Clarity</span>
+        <span>USCIS Case Monitor</span>
       </a>
 
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav">
@@ -28,6 +28,10 @@
         <a href="#pricing">Pricing</a>
         <a href="support.html">Support</a>
         <a class="nav-cta" data-extension-url href="#">Get the extension</a>
+        <form id="emailForm" class="email-form" onsubmit="return false;">
+          <input type="email" id="emailInput" placeholder="Your email" aria-label="Email for updates">
+          <button id="saveEmailBtn" class="button">Save</button>
+        </form>
       </nav>
     </div>
   </header>
@@ -267,7 +271,7 @@
           <p class="eyebrow">Clearer case information</p>
           <h2>Understand the response. Verify the official notice.</h2>
         </div>
-        <a class="button light" data-extension-url href="#">Get Case Clarity</a>
+        <a class="button light" data-extension-url href="#">Get USCIS Case Monitor</a>
       </div>
     </section>
   </main>
@@ -277,7 +281,7 @@
       <div>
         <a class="brand footer-brand" href="index.html">
           <span class="brand-mark" aria-hidden="true">C</span>
-          <span>Case Clarity</span>
+          <span>USCIS Case Monitor</span>
         </a>
         <p>Unofficial USCIS case-response helper.</p>
       </div>
@@ -290,7 +294,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year"></span> Case Clarity. Not affiliated with USCIS or DHS.</p>
+    <p>© <span id="year"></span> USCIS Case Monitor. Not affiliated with USCIS or DHS.</p>
     </div>
   </footer>
 

@@ -8,5 +8,5 @@ window.SITE_CONFIG = {
   extensionUrl: "https://chromewebstore.google.com/detail/uscis-case-monitor-local/pmfhomnifobhdenknahmdaekhfjnhfkf?authuser=0&hl=en-GB",
   donationUrl: "https://www.buymeacoffee.com/",
   contactEmail: "nitsin.ca@gmail.com",
-  productName: "Case Clarity"
+  productName: "USCIS Case Monitor"
 };

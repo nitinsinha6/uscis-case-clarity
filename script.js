@@ -44,3 +44,30 @@
     });
   }
 })();
+
+(function emailSignup() {
+  const emailInput = document.getElementById('emailInput');
+  const saveBtn = document.getElementById('saveEmailBtn');
+  if (!emailInput || !saveBtn) return;
+
+  const stored = localStorage.getItem('userEmail');
+  if (stored) {
+    emailInput.value = stored;
+    saveBtn.textContent = 'Saved';
+    saveBtn.disabled = true;
+  }
+
+  function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+
+  saveBtn.addEventListener('click', () => {
+    const email = emailInput.value.trim();
+    if (!validEmail(email)) {
+      alert('Please enter a valid email address.');
+      emailInput.focus();
+      return;
+    }
+    localStorage.setItem('userEmail', email);
+    saveBtn.textContent = 'Saved';
+    saveBtn.disabled = true;
+  });
+})();
